@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6f21ef54-c910-4d82-b4b2-69e2469463df",
+		"_postman_id": "aca798fa-3419-4751-90d2-a1cb9223f6cc",
 		"name": "SalesRep_Endpoints",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -28,7 +28,24 @@
 			"name": "Get Countries by Region 1",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/countries?region=America",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "America"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -36,7 +53,24 @@
 			"name": "Get Countries by Region 2",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/countries?region=MEA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "MEA"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -44,7 +78,24 @@
 			"name": "Get Countries by Region 3",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/countries?region=Apac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Apac"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -52,7 +103,24 @@
 			"name": "Get Countries by Region 4",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/countries?region=Europe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"countries"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Europe"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -60,7 +128,118 @@
 			"name": "Get SalesRep",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/salesrep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"salesrep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SalesRep by Region 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/salesrep?region=Apac",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"salesrep"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Apac"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SalesRep by Region 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/salesrep?region=Europe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"salesrep"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "Europe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SalesRep by Region 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/salesrep?region=MEA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"salesrep"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "MEA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SalesRep by Region 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/salesrep?region=America",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"salesrep"
+					],
+					"query": [
+						{
+							"key": "region",
+							"value": "America"
+						}
+					]
+				}
 			},
 			"response": []
 		}

@@ -42,18 +42,36 @@ app.get('/countries', (req, res) => {
 app.get('/salesrep', (req, res) => {
     //send request to /countries endpoint
     http.get(`http://localhost:${port}/countries`, (response) => {
-        //read data from response
-        let body = '';
-        response
-            .on('data', (chunk) => {
-                body += chunk;
-            })
-            .on('end', () => {
-                let countries = JSON.parse(body);
-                let regions = utils.numberOfCountryPerRegions(countries);
-                let minMaxSalesReq = utils.calculateMinMaxSalesRep(regions);
-                res.send(minMaxSalesReq);
-            });
+        let region = req.query.region;
+        if (region === undefined) {
+            //read data from response
+            let body = '';
+            response
+                .on('data', (chunk) => {
+                    body += chunk;
+                })
+                .on('end', () => {
+                    let countries = JSON.parse(body);
+                    let regions = utils.numberOfCountryPerRegions(countries);
+                    let minMaxSalesReq = utils.calculateMinMaxSalesRep(regions);
+                    res.send(minMaxSalesReq);
+                });
+        }
+        else {
+            //read data from response
+            let body = '';
+            response
+                .on('data', (chunk) => {
+                    body += chunk;
+                })
+                .on('end', () => {
+                    let countries = JSON.parse(body);
+                    let regions = utils.numberOfCountryPerRegions(countries);
+                    let minMaxSalesReq = utils.calculateMinMaxSalesRep(regions);
+                    res.send(minMaxSalesReq[region]);
+                });
+        }
+
     });
 });
 

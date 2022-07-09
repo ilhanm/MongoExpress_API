@@ -12,7 +12,10 @@ function numberOfCountryPerRegions(countries) {
     // calculate how many country exist in each region
     let regions = {};
     for (let i = 0; i < countries.length; i++) {
-        let region = countries[i].region.toLowerCase();
+        if(isApacCountry(countries[i].region)) {
+            countries[i].region = 'Apac';
+        }
+        let region = countries[i].region;
         if (regions[region] === undefined) {
             regions[region] = 1;
         } else {
@@ -25,13 +28,13 @@ function numberOfCountryPerRegions(countries) {
 function calculateMinMaxSalesRep(regions) {
     //each region should have at least 1 sales rep
     //each sales rep should have responsible for at least 3 and max 9 countries
-    let results = [];
+    let results = {};
     for (let region in regions) {
-        let result = {};
+        result = {};
         result.region = region;
         result.minSalesReq = Math.ceil(regions[region] / 7);
         result.maxSalesReq = Math.floor(regions[region] / 3);
-        results.push(result);        
+        results[result.region]= result;       
     }
     return results;
 }
